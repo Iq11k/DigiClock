@@ -9,12 +9,16 @@
 body {
   display: grid;
   place-items: center;
-  height: 100vh;
-  color: aliceblue;
+  min-height: 100vh;
   overflow: hidden;
   font-family: "Bebas Neue", sans-serif;
 }
-
+.head {
+  position: absolute;
+  top: 10%;
+  font-size: 4rem;
+  color: #ffd0c1;
+}
 .bg {
   background-image: url(BGn.svg);
   background-size: cover;
@@ -107,6 +111,45 @@ footer {
 
 #titikdua {
   animation: detik 2s infinite;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100vw;
+  }
+  .container {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bgbox {
+    width: 100%;
+    height: 40%;
+    border-radius: 20px;
+  }
+
+  .time {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  #jam::after,
+  #menit::after,
+  #detik::after {
+    display: none;
+  }
+
+  .date {
+    font-size: 1.5rem;
+    top: 20%;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
 }
 
 @keyframes detik {

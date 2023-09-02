@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  color: aliceblue;
+  overflow: hidden;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.bg {
+  background-image: url(BGn.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 110%;
+  position: absolute;
+  z-index: -1;
+}
+
+.container {
+  width: 70rem;
+  height: 20rem;
+  position: relative;
+}
+.bgbox {
+  width: 70rem;
+  height: 20rem;
+  border-radius: 54px;
+  border: 2px solid #767676;
+  background: linear-gradient(
+    259deg,
+    rgba(255, 186, 137, 0.66) -21.16%,
+    rgba(248, 111, 13, 0.13) 113.68%
+  );
+  display: grid;
+  place-content: center;
+  filter: blur(3px);
+}
+.time {
+  position: absolute;
+  width: 70rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffd0c1;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 10rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 20px;
+}
+#jam::after {
+  content: "JAM";
+  position: absolute;
+  font-size: 1.7rem;
+  letter-spacing: 5px;
+  bottom: -5px;
+  left: 20%;
+}
+#menit::after {
+  content: "MENIT";
+  position: absolute;
+  font-size: 1.7rem;
+  letter-spacing: 5px;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+}
+#detik::after {
+  content: "DETIK";
+  position: absolute;
+  font-size: 1.7rem;
+  letter-spacing: 5px;
+  bottom: -5px;
+  right: 20%;
+}
+.date {
+  position: absolute;
+  width: 70rem;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  color: #ffd0c1;
+  font-size: 1.9rem;
+  text-align: center;
+}
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  color: #ffd0c1;
+  font-size: 1.2rem;
+}
+
+#titikdua {
+  animation: detik 2s infinite;
+}
+
+@keyframes detik {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
